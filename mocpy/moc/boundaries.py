@@ -166,7 +166,7 @@ class Boundaries():
         # Accessing the borders one by one. At this step, V_subgraphs contains a list of cycles
         # (i.e. one describing the external border of the MOC component and several describing the holes
         # found in the MOC component).
-        V_subgraphs = nx.connected_component_subgraphs(V)
+        V_subgraphs = (V.subgraph(c).copy() for c in nx.connected_components(V))
         for v in V_subgraphs:
             # Compute the MST for each cycle
             v = nx.convert_node_labels_to_integers(v)
