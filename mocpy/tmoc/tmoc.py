@@ -451,7 +451,6 @@ class TimeMOC(AbstractMOC):
 
         if self._interval_set.empty():
             import warnings
-            warnings.simplefilter('default')
             warnings.warn('This time moc is empty', UserWarning)
             return
 

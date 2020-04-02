@@ -294,7 +294,6 @@ class MOC(AbstractMOC):
         """
 
         import warnings
-        warnings.simplefilter('default')
         warnings.warn('This method is not stable. A future more stable algorithm will be implemented!', DeprecationWarning)
         return Boundaries.get(self, order)
 
@@ -875,7 +874,6 @@ class MOC(AbstractMOC):
             Describes the coordinate system the plot will be (ICRS, Galactic are the only coordinate systems supported).
         """
         import warnings
-        warnings.simplefilter('default')
         warnings.warn('This method is deprecated and is no longer tested.'
                       'Please refer to this documentation page for plotting MOCs using'
                       'matplotlib: https://mocpy.readthedocs.io/en/latest/examples/examples.html#loading-and-plotting-the-moc-of-sdss', DeprecationWarning)
